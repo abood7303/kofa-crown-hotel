@@ -1,0 +1,308 @@
+@import "tailwindcss";
+@source "../views";
+
+@theme {
+    --color-on-background: #e2e2e6;
+    --color-surface: #090a0c;
+    --color-surface-container-lowest: #050607;
+    --color-on-primary-fixed: #2d1612;
+    --color-error: #ffb4ab;
+    --color-inverse-primary: #8d4f45;
+    --color-on-tertiary-fixed: #001f25;
+    --color-surface-container-highest: #222428;
+    --color-primary-container: #4D332D;
+    --color-primary: #d7c0bb;
+    --color-inverse-surface: #e2e2e6;
+    --color-on-tertiary-fixed-variant: #004e5b;
+    --color-surface-container: #111316;
+    --color-primary-fixed: #f9dad4;
+    --color-error-container: #93000a;
+    --color-surface-container-low: #0c0e11;
+    --color-surface-variant: #222428;
+    --color-outline: #a08d8a;
+    --color-on-surface-variant: #d8c2be;
+    --color-surface-container-high: #1a1c1f;
+    --color-on-secondary-fixed: #2d1612;
+    --color-on-error: #690005;
+    --color-surface-dim: #090a0c;
+    --color-tertiary-fixed: #aeedfc;
+    --color-on-tertiary-container: #86c4d3;
+    --color-tertiary-container: #00525f;
+    --color-tertiary: #92d0df;
+    --color-background: #050607;
+    --color-outline-variant: #534341;
+    --color-on-secondary-container: #f9dad4;
+    --color-secondary: #d7c0bb;
+    --color-on-tertiary: #00363f;
+    --color-on-secondary-fixed-variant: #5d3f3a;
+    --color-secondary-container: #5d3f3a;
+    --color-on-surface: #e2e2e6;
+    --color-on-error-container: #ffdad6;
+    --color-inverse-on-surface: #2f3034;
+    --color-surface-bright: #2c2e32;
+    --color-secondary-fixed-dim: #d7c0bb;
+    --color-on-primary: #442a26;
+    --color-primary-fixed-dim: #d7c0bb;
+    --color-secondary-fixed: #f9dad4;
+    --color-tertiary-fixed-dim: #92d0df;
+    --color-on-primary-fixed-variant: #634540;
+    --color-on-primary-container: #f9dad4;
+    --color-surface-tint: #d7c0bb;
+    --color-on-secondary: #442a26;
+
+    --font-headline: "Playfair Display", "Cairo", serif;
+    --font-body: "Inter", "IBM Plex Sans Arabic", sans-serif;
+    --font-label: "Inter", "IBM Plex Sans Arabic", sans-serif;
+    --font-serif-ar: "Noto Serif Arabic", serif;
+
+    --radius: 0.125rem;
+    --radius-lg: 0.25rem;
+    --radius-xl: 0.5rem;
+    --radius-full: 0.75rem;
+}
+
+
+@layer base {
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+}
+
+@layer utilities {
+    .scrim-bottom {
+        background: linear-gradient(to bottom, rgba(5, 6, 7, 0) 0%, rgba(5, 6, 7, 1) 100%);
+    }
+
+    .earthen-glow {
+        background: radial-gradient(circle at center, rgba(77, 51, 45, 0.08) 0%, rgba(5, 6, 7, 0) 70%);
+    }
+
+    .letter-spacing-wide {
+        letter-spacing: 0.05em;
+    }
+
+    .letter-spacing-tight {
+        letter-spacing: -0.01em;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-15px) rotate(0.5deg);
+        }
+
+        100% {
+            transform: translateY(0px) rotate(0deg);
+        }
+    }
+
+    .float-animation {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .float-delay-1 {
+        animation-delay: -1s;
+    }
+
+    .float-delay-2 {
+        animation-delay: -2.5s;
+    }
+
+    .float-delay-3 {
+        animation-delay: -4s;
+    }
+
+    .shape-pebble-1 {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+
+    .shape-pebble-2 {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    .shape-pebble-3 {
+        border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
+    }
+
+    .shape-pebble-4 {
+        border-radius: 45% 55% 35% 65% / 35% 45% 55% 65%;
+    }
+}
+
+@layer utilities {
+
+
+    body {
+        font-family: 'Manrope', 'Noto Serif Arabic', sans-serif;
+        background-color: #09090b;
+        color: #e2e2e6;
+    }
+
+    .serif {
+        font-family: 'Noto Serif Arabic', serif;
+    }
+
+    .glass-nav {
+        background: rgba(9, 9, 11, 0.4);
+        backdrop-filter: blur(20px);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .clifftop-scrim {
+        background: linear-gradient(to bottom, rgba(9, 9, 11, 0) 0%, rgba(9, 9, 11, 1) 100%);
+    }
+
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        background-color: #09090b;
+        color: #e2e2e6;
+    }
+
+    .font-serif {
+        font-family: 'Amiri', serif;
+    }
+
+    .clifftop-scrim {
+        background: linear-gradient(to bottom, rgba(9, 9, 11, 0) 0%, rgba(9, 9, 11, 1) 100%);
+    }
+
+    /* Organic Pebble/Blob Shape Mask */
+    .pebble-mask {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        overflow: hidden;
+        transition: border-radius 0.8s ease;
+    }
+
+    .pebble-mask:hover {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    .pebble-mask-alt {
+        border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+        overflow: hidden;
+        transition: border-radius 0.8s ease;
+    }
+
+    .pebble-mask-alt:hover {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    .pebble-mask-vertical {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        overflow: hidden;
+        transition: border-radius 0.8s ease;
+    }
+
+    .pebble-mask-vertical:hover {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+        background-color: #09090b;
+        color: #f4f4f5;
+    }
+
+    .font-serif {
+        font-family: 'Noto Serif Arabic', serif;
+    }
+
+    .clifftop-scrim {
+        background: linear-gradient(to bottom, rgba(9, 9, 11, 0) 0%, rgba(9, 9, 11, 1) 100%);
+    }
+
+
+    body {
+        font-family: 'Manrope', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .font-serif {
+        font-family: 'Noto Serif', serif;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-panel {
+        background: rgba(12, 12, 14, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .text-glow-primary {
+        text-shadow: 0 0 15px rgba(77, 51, 45, 0.4);
+    }
+
+    .border-glow-gold {
+        border-color: rgba(197, 160, 89, 0.3);
+        box-shadow: 0 0 20px rgba(197, 160, 89, 0.05);
+    }
+
+    .scrolling-bg {
+        background-attachment: fixed;
+    }
+
+    /* Reveal on Scroll Animations */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+    }
+
+    .reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reveal-left {
+        transform: translateX(-50px);
+    }
+
+    .reveal-left.revealed {
+        transform: translateX(0);
+    }
+
+    .reveal-right {
+        transform: translateX(50px);
+    }
+
+    .reveal-right.revealed {
+        transform: translateX(0);
+    }
+
+    .reveal-scale {
+        transform: scale(0.95);
+    }
+
+    .reveal-scale.revealed {
+        transform: scale(1);
+    }
+
+    /* Delays */
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+    .delay-500 { transition-delay: 500ms; }
+
+}
