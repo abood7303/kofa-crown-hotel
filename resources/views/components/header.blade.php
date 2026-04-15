@@ -1,4 +1,4 @@
-<nav x-data="{ scrolled: false }"
+<nav x-data="{ scrolled: false }" 
     @scroll.window="scrolled = (window.pageYOffset > 20)"
     :class="{ 'py-4 bg-black/80 backdrop-blur-2xl border-b border-white/10 shadow-2xl': scrolled, 'py-6 bg-transparent border-b border-transparent': !scrolled }"
     class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out px-6 md:px-12 flex justify-between items-center group">
